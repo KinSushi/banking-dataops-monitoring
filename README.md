@@ -1,4 +1,4 @@
-# banking-dataops-monitoring
+﻿# banking-dataops-monitoring
 
 <div align="center">
 
@@ -8,7 +8,7 @@
 
 **Synthetic regulated-data monitoring lab for DataOps, data quality, reconciliation and production support**
 
-PostgreSQL · Python · SQL controls · Streamlit · Data quality · Reconciliation · Incident runbooks
+PostgreSQL Â· Python Â· SQL controls Â· Streamlit Â· Data quality Â· Reconciliation Â· Incident runbooks
 
 ![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat&logo=python&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?style=flat&logo=postgresql&logoColor=white)
@@ -130,44 +130,44 @@ make reset
 
 ```text
 banking-dataops-monitoring/
-├── README.md
-├── PORTFOLIO.md
-├── LICENSE
-├── .gitignore
-├── .env.example
-├── pyproject.toml
-├── Makefile
-├── docker-compose.yml
-├── assets/
-│   └── banking-dataops-banner.svg
-├── .github/
-│   └── workflows/
-│       └── ci.yml
-├── data/
-│   ├── .gitkeep
-│   └── README.md
-├── sql/
-│   ├── 00_schema.sql
-│   ├── 01_seed_reference_data.sql
-│   ├── 02_data_quality_checks.sql
-│   ├── 03_reconciliation_queries.sql
-│   ├── 04_anomaly_queries.sql
-│   └── 05_performance_queries.sql
-├── src/
-│   └── banking_dataops/
-│       ├── __init__.py
-│       ├── config.py
-│       ├── db.py
-│       ├── generate_synthetic_data.py
-│       ├── ingest.py
-│       ├── quality_checks.py
-│       ├── reconciliation.py
-│       ├── monitoring.py
-│       └── incident_report.py
-├── dashboard/
-│   └── streamlit_app.py
-├── tests/
-└── docs/
+â”œâ”€â”€ README.md
+â”œâ”€â”€ PORTFOLIO.md
+â”œâ”€â”€ LICENSE
+â”œâ”€â”€ .gitignore
+â”œâ”€â”€ .env.example
+â”œâ”€â”€ pyproject.toml
+â”œâ”€â”€ Makefile
+â”œâ”€â”€ docker-compose.yml
+â”œâ”€â”€ assets/
+â”‚   â””â”€â”€ banking-dataops-banner.svg
+â”œâ”€â”€ .github/
+â”‚   â””â”€â”€ workflows/
+â”‚       â””â”€â”€ ci.yml
+â”œâ”€â”€ data/
+â”‚   â”œâ”€â”€ .gitkeep
+â”‚   â””â”€â”€ README.md
+â”œâ”€â”€ sql/
+â”‚   â”œâ”€â”€ 00_schema.sql
+â”‚   â”œâ”€â”€ 01_seed_reference_data.sql
+â”‚   â”œâ”€â”€ 02_data_quality_checks.sql
+â”‚   â”œâ”€â”€ 03_reconciliation_queries.sql
+â”‚   â”œâ”€â”€ 04_anomaly_queries.sql
+â”‚   â””â”€â”€ 05_performance_queries.sql
+â”œâ”€â”€ src/
+â”‚   â””â”€â”€ banking_dataops/
+â”‚       â”œâ”€â”€ __init__.py
+â”‚       â”œâ”€â”€ config.py
+â”‚       â”œâ”€â”€ db.py
+â”‚       â”œâ”€â”€ generate_synthetic_data.py
+â”‚       â”œâ”€â”€ ingest.py
+â”‚       â”œâ”€â”€ quality_checks.py
+â”‚       â”œâ”€â”€ reconciliation.py
+â”‚       â”œâ”€â”€ monitoring.py
+â”‚       â””â”€â”€ incident_report.py
+â”œâ”€â”€ dashboard/
+â”‚   â””â”€â”€ streamlit_app.py
+â”œâ”€â”€ tests/
+â””â”€â”€ docs/
 ```
 
 ---
@@ -235,3 +235,15 @@ This project is not:
 ## Portfolio signal
 
 This repository proves that the author can build, document and operate a small but complete regulated-data monitoring loop: generation, ingestion, validation, reconciliation, reporting, incident handling and public safety boundaries.
+---
+
+## Portfolio layer
+
+This repository is part of the KinSushi public technical portfolio.
+
+| Layer | Evidence |
+|---|---|
+| DataOps | SQL controls, reconciliation, Streamlit monitoring, incident runbooks |
+
+Detailed cross-repository context: [docs/PORTFOLIO_LAYER.md](docs/PORTFOLIO_LAYER.md)
+
