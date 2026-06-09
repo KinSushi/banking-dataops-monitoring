@@ -3,5 +3,5 @@
 <rect width="1280" height="900" rx="26" fill="#07111F"/>
 <text x="60" y="52" class="title">banking-dataops-monitoring</text>
 <text x="60" y="78" class="sub">Generated from real validation commands in GitHub Actions</text>
-<text x="60" y="90" class="mono">pip-upgrade: PASS exit=0</text><text x="60" y="116" class="mono">pip-install-editable-dev: PASS exit=0</text><text x="60" y="142" class="mono">compileall: PASS exit=0</text><text x="60" y="168" class="mono">pytest: PASS exit=0</text><text x="60" y="194" class="mono">ruff: FAIL exit=1</text><text x="60" y="220" class="mono">generate-synthetic-data: PASS exit=0</text><text x="60" y="246" class="mono">import-check: PASS exit=0</text><text x="60" y="272" class="mono">secret-keyword-scan: REVIEW exit=0</text>
+<text x="60" y="90" class="mono">pip-upgrade: PASS exit=0</text><text x="60" y="116" class="mono">pip-install-editable-dev: PASS exit=0</text><text x="60" y="142" class="mono">compileall: PASS exit=0</text><text x="60" y="168" class="mono">pytest: PASS exit=0</text><text x="60" y="194" class="mono">ruff: PASS exit=0</text><text x="60" y="220" class="mono">generate-synthetic-data: PASS exit=0</text><text x="60" y="246" class="mono">import-check: PASS exit=0</text><text x="60" y="272" class="mono">secret-keyword-scan: REVIEW exit=0</text>
 </svg>
