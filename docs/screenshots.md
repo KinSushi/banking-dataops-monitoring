@@ -1,16 +1,6 @@
-# Screenshots
+# Screenshots and content previews
 
-Screenshots should be added after local execution.
+Generated from real repository validation commands in GitHub Actions.
 
-Expected screenshots:
-
-1. Dashboard overview.
-2. Quality checks table.
-3. Reconciliation summary.
-4. Suspicious transaction sample.
-5. CI passing.
-6. Docker container running.
-
-## Public-safety rule
-
-Screenshots must not include private hostnames, IPs, tokens, emails, real data or employer-specific material.
+- [validation-preview.svg](screenshots/validation-preview.svg)
+- [validation-output.html](screenshots/validation-output.html)
