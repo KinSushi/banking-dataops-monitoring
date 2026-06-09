@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import csv
 from pathlib import Path
-from typing import Iterable
 
 from banking_dataops.config import Settings, load_settings
 from banking_dataops.db import connect, execute_sql_file, reset_tables
