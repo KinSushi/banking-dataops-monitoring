@@ -1,4 +1,4 @@
-﻿# banking-dataops-monitoring
+# banking-dataops-monitoring
 
 <div align="center">
 
@@ -8,7 +8,7 @@
 
 **Synthetic regulated-data monitoring lab for DataOps, data quality, reconciliation and production support**
 
-PostgreSQL Â· Python Â· SQL controls Â· Streamlit Â· Data quality Â· Reconciliation Â· Incident runbooks
+PostgreSQL / Python / SQL controls / Streamlit / Data quality / Reconciliation / Incident runbooks
 
 ![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat&logo=python&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?style=flat&logo=postgresql&logoColor=white)
@@ -36,6 +36,30 @@ No real banking, insurance, health, client, employer or private data belongs her
 
 ---
 
+## Validation evidence
+
+Generated validation artifacts are available in:
+
+- [docs/local_run_report.md](docs/local_run_report.md)
+- [docs/screenshots.md](docs/screenshots.md)
+- [docs/VALIDATION.md](docs/VALIDATION.md)
+
+Current public validation covers:
+
+```text
+pip install
+python -m compileall
+pytest
+ruff
+synthetic data generation
+package import checks
+secret keyword review
+```
+
+The latest report shows `pytest`, `ruff`, synthetic data generation and import checks passing. The `secret-keyword-scan` step is intentionally marked as `REVIEW` because documentation and `.env.example` contain safety-related keywords.
+
+---
+
 ## Documentation index
 
 | Document | Purpose |
@@ -48,7 +72,8 @@ No real banking, insurance, health, client, employer or private data belongs her
 | [docs/rollback_plan.md](docs/rollback_plan.md) | Local reset and rollback procedure |
 | [docs/monitoring_plan.md](docs/monitoring_plan.md) | Monitoring dimensions and future observability path |
 | [docs/public_safety.md](docs/public_safety.md) | Public GitHub safety rules |
-| [docs/screenshots.md](docs/screenshots.md) | Screenshot placeholders to fill after local execution |
+| [docs/screenshots.md](docs/screenshots.md) | Validation previews and content screenshots |
+| [docs/VALIDATION.md](docs/VALIDATION.md) | Local and CI validation procedure |
 
 ---
 
@@ -90,31 +115,14 @@ flowchart LR
 ## Quickstart
 
 ```bash
-# install dependencies
 make install
-
-# generate synthetic CSV data
 make generate
-
-# run unit tests and lint checks
 make ci
-
-# start PostgreSQL
 make up
-
-# load CSV files into PostgreSQL
 make ingest
-
-# run SQL-backed quality controls
 make quality
-
-# run reconciliation summaries
 make reconcile
-
-# generate incident report if controls failed
 make incident
-
-# launch dashboard
 make dashboard
 ```
 
@@ -130,44 +138,21 @@ make reset
 
 ```text
 banking-dataops-monitoring/
-â”œâ”€â”€ README.md
-â”œâ”€â”€ PORTFOLIO.md
-â”œâ”€â”€ LICENSE
-â”œâ”€â”€ .gitignore
-â”œâ”€â”€ .env.example
-â”œâ”€â”€ pyproject.toml
-â”œâ”€â”€ Makefile
-â”œâ”€â”€ docker-compose.yml
-â”œâ”€â”€ assets/
-â”‚   â””â”€â”€ banking-dataops-banner.svg
-â”œâ”€â”€ .github/
-â”‚   â””â”€â”€ workflows/
-â”‚       â””â”€â”€ ci.yml
-â”œâ”€â”€ data/
-â”‚   â”œâ”€â”€ .gitkeep
-â”‚   â””â”€â”€ README.md
-â”œâ”€â”€ sql/
-â”‚   â”œâ”€â”€ 00_schema.sql
-â”‚   â”œâ”€â”€ 01_seed_reference_data.sql
-â”‚   â”œâ”€â”€ 02_data_quality_checks.sql
-â”‚   â”œâ”€â”€ 03_reconciliation_queries.sql
-â”‚   â”œâ”€â”€ 04_anomaly_queries.sql
-â”‚   â””â”€â”€ 05_performance_queries.sql
-â”œâ”€â”€ src/
-â”‚   â””â”€â”€ banking_dataops/
-â”‚       â”œâ”€â”€ __init__.py
-â”‚       â”œâ”€â”€ config.py
-â”‚       â”œâ”€â”€ db.py
-â”‚       â”œâ”€â”€ generate_synthetic_data.py
-â”‚       â”œâ”€â”€ ingest.py
-â”‚       â”œâ”€â”€ quality_checks.py
-â”‚       â”œâ”€â”€ reconciliation.py
-â”‚       â”œâ”€â”€ monitoring.py
-â”‚       â””â”€â”€ incident_report.py
-â”œâ”€â”€ dashboard/
-â”‚   â””â”€â”€ streamlit_app.py
-â”œâ”€â”€ tests/
-â””â”€â”€ docs/
+|-- README.md
+|-- PORTFOLIO.md
+|-- LICENSE
+|-- .env.example
+|-- pyproject.toml
+|-- Makefile
+|-- docker-compose.yml
+|-- assets/
+|-- .github/workflows/
+|-- data/
+|-- sql/
+|-- src/banking_dataops/
+|-- dashboard/
+|-- tests/
+`-- docs/
 ```
 
 ---
@@ -195,14 +180,14 @@ banking-dataops-monitoring/
 make ci
 ```
 
-The GitHub Actions workflow runs:
+The standard CI workflow runs:
 
 ```text
 ruff check .
 pytest
 ```
 
-The CI does not require PostgreSQL for V1. Database-backed flows are run locally with Docker.
+The extended portfolio validation workflow also generates public validation reports and screenshots under `docs/`.
 
 ---
 
@@ -234,7 +219,8 @@ This project is not:
 
 ## Portfolio signal
 
-This repository proves that the author can build, document and operate a small but complete regulated-data monitoring loop: generation, ingestion, validation, reconciliation, reporting, incident handling and public safety boundaries.
+This repository proves the ability to build, document and operate a small but complete regulated-data monitoring loop: generation, ingestion, validation, reconciliation, reporting, incident handling and public safety boundaries.
+
 ---
 
 ## Portfolio layer
@@ -246,4 +232,3 @@ This repository is part of the KinSushi public technical portfolio.
 | DataOps | SQL controls, reconciliation, Streamlit monitoring, incident runbooks |
 
 Detailed cross-repository context: [docs/PORTFOLIO_LAYER.md](docs/PORTFOLIO_LAYER.md)
-
