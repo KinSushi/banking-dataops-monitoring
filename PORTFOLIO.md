@@ -87,7 +87,7 @@ Synthetic regulated-data monitoring lab demonstrating PostgreSQL, SQL data-quali
 
 ## Recruiter-readable positioning
 
-This project is public technical evidence for DataOps, Junior Data Engineering, Application & Data Support, Data Quality and regulated-data production roles.
+This project is public technical evidence for DataOps, Data Engineering, Application & Data Support, Data Quality and regulated-data production roles.
 
 It demonstrates the ability to build and operate a small but complete data-control loop:
 
@@ -117,7 +117,7 @@ synthetic data -> PostgreSQL -> SQL controls -> Python runner -> reconciliation 
 
 | Role | Fit |
 |---|---|
-| Junior Data Engineer | SQL schema, ingestion, Python data flow |
+| Data Engineer | SQL schema, ingestion, Python data flow |
 | DataOps Engineer | quality checks, reconciliation, monitoring |
 | Application & Data Support | incident investigation, failed-control triage |
 | IT Production Engineer | Docker Compose, Makefile, runbooks |
@@ -133,7 +133,7 @@ synthetic data -> PostgreSQL -> SQL controls -> Python runner -> reconciliation 
 
 > I can investigate failed data controls, check source-system reconciliation, review failed rows and document incidents through a runbook.
 
-### Junior Data Engineer
+### Data Engineer
 
 > I can design a small relational model, generate data, load it into PostgreSQL and automate validation with Python.
 
