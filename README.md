@@ -351,7 +351,7 @@ Reproduce with `make reset` then `make ci`. All figures come from **synthetic** 
 
 | Role family | Why this project helps |
 |---|---|
-| Junior Data Engineer | schema, ingestion, SQL and Python data flow |
+| Data Engineer | schema, ingestion, SQL and Python data flow |
 | DataOps Engineer | quality checks, monitoring, reconciliation, runbooks |
 | Application & Data Support | incident investigation and operational controls |
 | IT Production Engineer | runtime, Docker, Makefile, operational commands |
@@ -366,18 +366,18 @@ Reproduce with `make reset` then `make ci`. All figures come from **synthetic** 
 
 ```mermaid
 flowchart LR
-    A[Synthetic generator] --> B[CSV files]
-    B --> C[PostgreSQL 16]
-    C --> D[SQL quality controls]
-    C --> E[Reconciliation queries]
-    D --> F[Python quality runner]
-    E --> G[Python reconciliation runner]
-    F --> H[quality_check_results]
-    G --> I[reconciliation_results]
-    H --> J[Streamlit dashboard]
-    I --> J
-    F --> K[Incident report]
-    J --> L[Operational review]
+ A[Synthetic generator] --> B[CSV files]
+ B --> C[PostgreSQL 16]
+ C --> D[SQL quality controls]
+ C --> E[Reconciliation queries]
+ D --> F[Python quality runner]
+ E --> G[Python reconciliation runner]
+ F --> H[quality_check_results]
+ G --> I[reconciliation_results]
+ H --> J[Streamlit dashboard]
+ I --> J
+ F --> K[Incident report]
+ J --> L[Operational review]
 ```
 
 ---
