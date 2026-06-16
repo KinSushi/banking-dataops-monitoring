@@ -15,7 +15,9 @@ PostgreSQL / Python / SQL controls / Streamlit / Data quality / Reconciliation /
 ![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?style=flat&logo=docker&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B?style=flat&logo=streamlit&logoColor=white)
 ![Data Quality](https://img.shields.io/badge/Data%20Quality-SQL%20Controls-2EA043?style=flat)
-![CI](https://img.shields.io/badge/CI-GitHub%20Actions-2088FF?style=flat&logo=githubactions&logoColor=white)
+[![CI](https://github.com/KinSushi/banking-dataops-monitoring/actions/workflows/ci.yml/badge.svg)](https://github.com/KinSushi/banking-dataops-monitoring/actions)
+![Tests](https://img.shields.io/badge/tests-pytest-0A9396)
+![Lint](https://img.shields.io/badge/lint-ruff-orange)
 ![Public Safety](https://img.shields.io/badge/Data-Synthetic%20Only-24292F?style=flat)
 
 </div>
@@ -74,6 +76,22 @@ The latest report shows `pytest`, `ruff`, synthetic data generation and import c
 | [docs/public_safety.md](docs/public_safety.md) | Public GitHub safety rules |
 | [docs/screenshots.md](docs/screenshots.md) | Validation previews and content screenshots |
 | [docs/VALIDATION.md](docs/VALIDATION.md) | Local and CI validation procedure |
+
+---
+
+## What a run produces (synthetic data)
+
+A full local run executes the control loop end to end and leaves reproducible evidence on disk:
+
+| Stage | Output |
+|---|---|
+| Quality controls | 7 checks (nulls, duplicates, invalid amounts, referential integrity, risk score, status, freshness) |
+| Reconciliation | source-vs-target row and amount deltas in `reports/` |
+| Dashboard | Streamlit monitoring view (`dashboard/streamlit_app.py`) |
+| Incident | runbook-driven investigation note in `docs/incident_runbook.md` |
+| Validation | `pytest` + `ruff` results in `docs/local_run_report.md` |
+
+Reproduce with `make reset` then `make ci`. All figures come from **synthetic** data only.
 
 ---
 
